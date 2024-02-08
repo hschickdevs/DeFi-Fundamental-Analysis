@@ -123,9 +123,38 @@ As we can see, the **price impact** of this trade is **0.0004%**, which is essen
 
 ### Swap Demonstration
 
-Now that we've explored the concept of price impact, let's demonstrate a swap on Uniswap. We will swap 2 ETH for USDC, and then check the reported price impact, fees, and actual amount of USDC received.
+Now that we've explored the concept of price impact, let's demonstrate a swap on Uniswap. We will swap ETH for 2 USDC, and then check the reported price impact, fees, and actual amount of USDC received.
 
+With the current pool selected, for a swap of ETH for 2 USDC, the price impact is report as just 1.065% since our transaction is so small. In addition to this price impact, we will be paying a protocol fee of <$0.01 and a network (gas) cost of $0.47.
 
+![Swap Price Impact](docs/swap_price_impact.png)
+
+In confirming the swap we can see that we are exchanging about 0.000829 ETH.
+
+![Swap Confirmation](docs/swap_confirm.png)
+
+After the transaction was confirmed, we can see that I've received exactly 2 USDC into the wallet, which is what I expected. I paid a total of $0.52 in gas fees, and spent ~$2.01 in ETH to obtain the USDC. These values change always so there are discrepancies in the exact values between the different UIs.
+
+![Swap Receipt](docs/txn.png)
+
+![Wallet USDC](docs/wallet_usdc.png)
+
+## Liquidity Provision
+
+In addition to swapping, Uniswap also allows users to provide liquidity to the platform. This is done by depositing an asset into one of the pools, and then receiving a share of the pool's fees in return.
+
+To explore this I will be depositing the $2 of USDC that I just swapped for into the ETH/USDC pool.
+
+I will be entering into the 0.05% fee pool, which means that I will receive a _share_ of the 0.05% fee on every swap that occurs in the pool. The low price and high prices of my positions are set to +/- 10% of the ETH price upon opening the position. If the USDC price of ETH falls outside of this range, my position will become inactive.
+
+![Add Liquidity](docs/add_liquidity.png)
+
+In depositing 2 USDC, I will have to deposit an equivalent amount of ETH to the pool. This is calculated as the current price of USDC in ETH, multiplied by the amount of USDC I'm depositing, which is 2. This results in a deposit of <0.001 ETH.
+
+![lp deposit](docs/lp_deposit.png)
+
+Once I have added the liquidity ([_txn reference_](https://basescan.org/tx/0x51cff6f83b2b9c614a47212827a9c8ec6c58460d6bda2f8ea5336bb9d9eba260)), I waited ...
 
 ## 2. Aave - Supplying & Borrowing
+
 
