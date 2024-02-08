@@ -4,9 +4,9 @@
 
  I will be testing and analyzing these platforms on the Base Ethereum L2 chain as it has cheaper gas fees and faster transaction times than the Ethereum L1 chain.
 
-## 1. Uniswap - Price Impact & Swapping
+## 1. Uniswap - Price Impact, Swapping, & Liquidity
 
-> 🔎 _See my analysis notebook here for reference: [**Uniswap Analysis**](Uniswap_Analysis.ipynb)_
+> 🔎 _See my analysis notebook here for reference: [**Uniswap Analysis**](uniswap.ipynb)_
 
 Uniswap is a decentralized exchange (DEX) that allows users to swap various ERC-20 tokens. It is a popular platform for trading and providing liquidity to the DeFi ecosystem.
 
@@ -59,17 +59,73 @@ So at this point we have calculated the following:
 - **USDbC Reserves Before**: 1,030,000
 - **WETH Reserves Before**: 203.59
 - **Reserve Ratio Before**: 5059.19
+- **Constant Product**: 209,697,700
+
+<br>
+
 - **USDbC Reserves After**: 1,230,000
 - **WETH Reserves After**: 170.5
 - **Reserve Ratio After**: 7214.67
 
-Using this information, we can calculate the price impact of our trade using `(reserve_ratio_after / reserve_ratio_before) - 1 = price_impact`:
+Using this information, we can calculate the price impact of our trade using:
+
+![alt text](docs/price_impact.png)
 
 ```
-(1,230,000 / 5059.19) - 1 = 0.426%
+((7214.67 - 5059.19) / 5059.19) * 100 = 42.6%
 ```
 
-This value of 0.426% is the price impact of our trade, which is a relatively low impact. This means that our trade will have a relatively low impact on the market price of WETH, and is a good trade to make as we actually gain a higher value in WETH than the USDbC we are swapping for it.
+This value of **42.6%** is the **price impact** of our trade, which is a signifigant impact. This suggesdts that the price of WETH will increase by 42.6% after our trade, so we would essentially receive only `1 - 42.6% = 57.4%` of the value that we deposited. This is a good example of why it's important to consider the price impact of your trade before making a swap.
+
+### Price Impact of Swapping 2 USDbC for WETH
+
+Now that we've given an example of a significant trade, let's consider a smaller trade that will have a much lower price impact and effect on the liquidity pool.
+
+We already have the following data from our previous example:
+
+- **USDbC Reserves Before**: 1,030,000
+- **WETH Reserves Before**: 203.59
+- **Reserve Ratio Before**: 5059.19
+- **Constant Product**: 209,697,700
+
+
+Now we need to find the reserves and ratio after the swap.
+
+We can calculate the USDbC reserves after the swap as `USDbC_Reserves_Before + 2 = USDbC_Reserves_After`:
+
+```
+1,030,000 + 2 = 1,030,002
+```
+
+We can then calculate the WETH reserves after the swap as `constant_product / USDbC_Reserves_After = WETH_Reserves_After`:
+
+```
+209,697,700 / 1,030,002 = 203.5896
+```
+
+Since the value of this transaction is so small, the difference in the WETH reserves from our swap is negligible. 
+
+We can then calculate the reserve ratio after the swap as `USDbC_Reserves_After / WETH_Reserves_After = reserve_ratio_after`:
+
+```
+1,030,002 / 203.5896 = 5059.21
+```
+
+Using this information, we can calculate the price impact of our trade using:
+
+```
+((5059.21 - 5059.19) / 5059.19) * 100 = 0.0004%
+```
+
+As we can see, the **price impact** of this trade is **0.0004%**, which is essentially negligible. This is a good example of how the price impact of a trade can be significantly reduced by reducing the size of the trade relative to the size of the liquidity pool.
+
+> ⚠️ _It's important to note that the reserves displayed on the Uniswap stats UI are rounded to 2 decimal places, so the values we calculated may not be precise enough as 2 decimal places in ETH isn't low enough to reflect such small transactions._
+
+### Swap Demonstration
+
+Now that we've explored the concept of price impact, let's demonstrate a swap on Uniswap. We will swap 2 ETH for USDC, and then check the reported price impact, fees, and actual amount of USDC received.
+
+
 
 ## 2. Aave - Supplying & Borrowing
 
