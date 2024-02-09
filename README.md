@@ -4,6 +4,21 @@
 
  I will be testing and analyzing these platforms on the Base Ethereum L2 chain as it has cheaper gas fees and faster transaction times than the Ethereum L1 chain.
 
+### Table of Contents
+
+1. [Introduction](#defi-fundamental-analysis)
+2. [Uniswap - Price Impact, Swapping, & Liquidity](#1-uniswap---price-impact-swapping--liquidity)
+   - [Price Impact Swapping 200,000 USDbC for WETH](#price-impact-swapping-200000-usdbc-for-weth)
+   - [Price Impact of Swapping 2 USDbC for WETH](#price-impact-of-swapping-2-usdbc-for-weth)
+   - [Swap Demonstration](#swap-demonstration)
+   - [Liquidity Provision](#liquidity-provision)
+3. [Aave - Supplying & Borrowing](#2-aave---supplying--borrowing)
+   - [Interest Rate Model Summary](#interest-rate-model-summary)
+   - [Supply ETH & Borrow USDC](#supply-eth--borrow-usdc)
+   - [Repay USDC & Withdraw ETH](#repay-usdc--withdraw-eth)
+4. [DeFi Fundamental Analysis](#defi-fundamental-analysis-1)
+
+
 ## 1. Uniswap - Price Impact, Swapping, & Liquidity
 
 > 🔎 _See my analysis notebook here for reference: [**Uniswap Analysis**](uniswap.ipynb)_
