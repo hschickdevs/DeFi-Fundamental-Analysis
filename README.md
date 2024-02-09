@@ -1,3 +1,5 @@
+<img src="docs/header.png" alt="">
+
 # DeFi-Fundamental-Analysis
 
  In this project for my UT Austin MSITM Financial Technology class I explore a few DeFi protocols, and then test the applicability of fundamental analysis in the DeFi lanscape.
@@ -281,7 +283,7 @@ To summarize the results of this trade:
 
 I lost 0.000108806496389 ETH (because of the loan payoff with collateral) but I kept the USDC that I borrowed. So in the end I have about the same amount that I started with in total value (Excl. Gas Fees).
 
-## DeFi Fundamental Analysis
+## ????? PLATFORM ???? - DeFi Fundamental Analysis
 
 Now that we've explored the functionality of Uniswap and Aave, we can begin to consider how we might apply fundamental analysis to these platforms.
 
