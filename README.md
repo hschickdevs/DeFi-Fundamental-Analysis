@@ -2,7 +2,7 @@
 
 # DeFi-Fundamental-Analysis
 
- In this project for my UT Austin MSITM Financial Technology class I explore a few DeFi protocols to display their functionality , and then test the applicability of fundamental analysis in the DeFi lanscape using a DCF analysis.
+ In this project for my UT Austin MSITM Financial Technology class I explore a few DeFi protocols to display their functionality , and then test the applicability of fundamental analysis in the DeFi lanscape using a DCF.
 
  I will be testing and analyzing these platforms on the Base Ethereum L2 chain as it has cheaper gas fees and faster transaction times than the Ethereum L1 chain.
 
