@@ -308,7 +308,7 @@ Trends indicate an increasing interest in decentralized financial services, offe
 
 Please see the DCF model that I ran by viewing the Python notebook here:
 
-[**🕵️ Aave DCF Analysis**](aave.ipynb)
+[**🕵️ Aave DCF Analysis**](aave_dcf.ipynb)
 
 ### Results Interpretation
 
