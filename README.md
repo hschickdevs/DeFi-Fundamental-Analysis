@@ -4,8 +4,6 @@
 
  In this project for my UT Austin MSITM Financial Technology class I explore a few DeFi protocols to display their functionality , and then test the applicability of fundamental analysis in the DeFi lanscape using a DCF.
 
- I will be testing and analyzing these platforms on the Base Ethereum L2 chain as it has cheaper gas fees and faster transaction times than the Ethereum L1 chain.
-
 ### Table of Contents
 
 1. [Uniswap - Price Impact, Swapping, & Liquidity](#1-uniswap---price-impact-swapping--liquidity)
@@ -28,6 +26,8 @@
 > 🔎 _See my analysis notebook here for reference: [**Uniswap Analysis**](uniswap.ipynb)_
 
 Uniswap is a decentralized exchange (DEX) that allows users to swap various ERC-20 tokens. It is a popular platform for trading and providing liquidity to the DeFi ecosystem.
+
+I will be exploring this platform on the Base Ethereum L2 chain as it has cheaper gas fees and faster transaction times than the Ethereum L1 chain.
 
 One of the key considerations when swapping tokens is the price impact of your trade. The price impact of a trade is essentially the impact of your trade on the market of the underlying asset pair. When you trade one asset for another, you're increasing the supply of one asset and decreasing the supply of the other. This can cause the price of the asset you're buying to increase and the price of the asset you're selling to decrease. It can also cause the inverse, which would present a profit on your trade, also called an "arbitrage." The weight of this impact is determined by the size of your trade relative to the size of the liquidity pool.
 
